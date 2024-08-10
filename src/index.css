@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    padding: 0;
+    margin: 0;  
+    box-sizing: border-box;
+}
+
+
+/* Reset margin and padding for ul and span */
+ul, span {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container for dropdown */
+  .dropdown-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for dropdown arrow */
+  .dropdown-arrow {
+    margin-right: 8px; /* Adjust as needed */
+    transition: transform 0.3s ease;
+  }
+  
+  /* Rotate arrow based on dropdown state */
+  .dropdown-arrow.rotate-180 {
+    transform: rotate(180deg);
+  }
+  
+  /* Style for dropdown menu */
+  .dropdown-menu {
+    position: absolute;
+    left: 0;
+    padding-top: 0.5rem; /* Adjust spacing from the top */
+    width: 11rem; /* Adjust width as needed */
+    background-color: white;
+    color: gray-900;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+    max-height: 0; /* Hide by default */
+  }
+  
+  /* Show dropdown when active */
+  .dropdown-menu.max-h-60 {
+    max-height: 15rem; /* Adjust height as needed */
+  }
+  
+  /* Remove default list styles */
+  ul.dropdown-menu {
+    list-style: none;
+  }
+  
+  /* Style for menu items */
+  ul.dropdown-menu li {
+    border-bottom: 1px solid #ddd; /* Optional, for item separation */
+  }
+  
+  ul.dropdown-menu a {
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: gray-800;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem; /* Adjust as needed */
+  }
+  
+  /* Hover effect for menu items */
+  ul.dropdown-menu a:hover {
+    background-color: gray-700; /* Adjust hover color as needed */
+  }
+  
+  /* Style for the mobile menu */
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    max-height: 0; /* Hide by default */
+  }
+  
+  /* Show mobile menu when open */
+  .mobile-menu.open {
+    max-height: 20rem; /* Adjust height as needed */
+  }
+  
+  /* Style for mobile menu items */
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .mobile-menu a {
+    color: gray-600;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for mobile menu items */
+  .mobile-menu a:hover {
+    color: orange-600; /* Adjust hover color as needed */
+  }
+  
+
+
+
+  /* Add this to your CSS file or in a <style> tag */
+/* .menu4-container {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu4-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+} */
